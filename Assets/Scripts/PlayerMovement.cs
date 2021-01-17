@@ -12,25 +12,9 @@ public class PlayerMovement : MonoBehaviour {
 	float horizontalMove = 0f;
 	bool jump = false;
 	bool crouch = false;
-	bool isRewinding = false;
 
 	// Update is called once per frame
 	void Update () {
-
-		if (Input.GetKeyDown(KeyCode.Return))
-		{
-			isRewinding = true;
-			return;
-		}
-
-		if (Input.GetKeyUp(KeyCode.Return))
-		{
-			isRewinding = false;
-		}
-
-		if (isRewinding) {
-			return;
-		}
 
 		horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
