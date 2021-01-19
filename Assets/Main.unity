@@ -160,7 +160,7 @@ MonoBehaviour:
   m_Follow: {fileID: 820667352}
   m_Lens:
     FieldOfView: 40
-    OrthographicSize: 15
+    OrthographicSize: 5.69
     NearClipPlane: 0.1
     FarClipPlane: 5000
     Dutch: 0
@@ -181,7 +181,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 40152486}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.9400005, y: 2.0099998, z: -10}
+  m_LocalPosition: {x: -1.9400003, y: 2.5686, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1072766135}
@@ -13657,7 +13657,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 15
+  orthographic size: 5.69
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -13681,7 +13681,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000398609}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.9400005, y: 2.0099998, z: -10}
+  m_LocalPosition: {x: -1.9400003, y: 2.5686, z: -10}
   m_LocalScale: {x: 1, y: 1.05, z: 1}
   m_Children:
   - {fileID: 142962750}
@@ -16608,7 +16608,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position1: {fileID: 540251634}
   position2: {fileID: 610317741}
-  speed: 0.2
+  speed: 0.5
   startPosition: {fileID: 540251634}
 --- !u!61 &1369745838
 BoxCollider2D:
