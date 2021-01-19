@@ -21,6 +21,7 @@ public class RayCastWeapon : MonoBehaviour {
 	{
 		RaycastHit2D hitInfo = Physics2D.Raycast(firePoint.position, firePoint.right);
 
+
 		if (hitInfo)
 		{
 			Enemy enemy = hitInfo.transform.GetComponent<Enemy>();

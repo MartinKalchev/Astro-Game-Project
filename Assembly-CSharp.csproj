@@ -62,19 +62,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\EnemyAI.cs" />
-    <Compile Include="Assets\EnemyGFX.cs" />
-    <Compile Include="Assets\HealthBarScript.cs" />
-    <Compile Include="Assets\PlayerHUD.cs" />
-    <Compile Include="Assets\PointInTime.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\CharacterController2D.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
+    <Compile Include="Assets\Scripts\EnemyAI.cs" />
+    <Compile Include="Assets\Scripts\EnemyBullet.cs" />
+    <Compile Include="Assets\Scripts\EnemyGFX.cs" />
+    <Compile Include="Assets\Scripts\HealthBarScript.cs" />
     <Compile Include="Assets\Scripts\Platform.cs" />
+    <Compile Include="Assets\Scripts\PlayerHUD.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\PointInTime.cs" />
     <Compile Include="Assets\Scripts\PrefabWeapon.cs" />
     <Compile Include="Assets\Scripts\RayCastWeapon.cs" />
-    <Compile Include="Assets\TimeBody.cs" />
+    <Compile Include="Assets\Scripts\Spikes.cs" />
+    <Compile Include="Assets\Scripts\TimeBody.cs" />
     <Reference Include="UnityEngine">
       <HintPath>F:/Unity19.4/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
