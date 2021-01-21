@@ -30,6 +30,8 @@ public class PlayerHUD : MonoBehaviour
     {
         currentHealth -= damage;
 
+        gameObject.GetComponent<Animation>().Play("PlayerRedFlag");
+
         healthBar.SetHealth(currentHealth);
     }
 }

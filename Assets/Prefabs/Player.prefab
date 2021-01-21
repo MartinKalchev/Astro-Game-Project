@@ -500,6 +500,8 @@ GameObject:
   - component: {fileID: 1473198976345064439}
   - component: {fileID: 1473198976345064438}
   - component: {fileID: 1473198976345064437}
+  - component: {fileID: 1473198976075178009}
+  - component: {fileID: 3719693847006922949}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -703,6 +705,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 1473198976345064397}
   animator: {fileID: 1473198976345064393}
+  rb: {fileID: 1473198976345064398}
   runSpeed: 40
 --- !u!95 &1473198976345064393
 Animator:
@@ -768,7 +771,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  currentHealth: 100
+  currentHealth: 0
   healthBar: {fileID: 1473198976623330710}
 --- !u!114 &1473198976345064437
 MonoBehaviour:
@@ -784,6 +787,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   grayOutEffect: {fileID: 1473198976645270241}
+--- !u!111 &1473198976075178009
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1473198976345064385}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 49de6c20bf068cf4eaec20a85886dc47, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 49de6c20bf068cf4eaec20a85886dc47, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!114 &3719693847006922949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1473198976345064385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ee920ec03766f2438847804662315c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1473198976410114813
 GameObject:
   m_ObjectHideFlags: 0
