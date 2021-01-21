@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PatrollingEnemy : MonoBehaviour
 {
-
-    //public int health = 100;
     public float speed = 2f;
     public Rigidbody2D rb;
     public LayerMask groundLayers;
@@ -41,23 +39,5 @@ public class PatrollingEnemy : MonoBehaviour
         }
     }
 
-
-    //public GameObject deathEffect;
-
-    //public void TakeDamage(int damage)
-    //{
-    //    health -= damage;
-
-    //    if (health <= 0)
-    //    {
-    //        Die();
-    //    }
-    //}
-
-    //void Die()
-    //{
-    //    Instantiate(deathEffect, transform.position, Quaternion.identity);
-    //    Destroy(gameObject);
-    //}
 
 }
