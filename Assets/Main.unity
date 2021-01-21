@@ -6373,10 +6373,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1725125154, guid: b82a42a7fc73b754a895eab973848e0f, type: 3}
-      propertyPath: speed
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 6915041186671705784, guid: b82a42a7fc73b754a895eab973848e0f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6437,9 +6433,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6915041186671705783, guid: b82a42a7fc73b754a895eab973848e0f, type: 3}
-    - {fileID: 162798229, guid: b82a42a7fc73b754a895eab973848e0f, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b82a42a7fc73b754a895eab973848e0f, type: 3}
 --- !u!1 &579161646
 GameObject:
@@ -31002,16 +30996,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 1473198976345064397, guid: 2a30489c4f88bd64abe012dedee24d1c,
-        type: 3}
-      propertyPath: m_JumpForce
-      value: 1200
-      objectReference: {fileID: 0}
-    - target: {fileID: 1473198976345064397, guid: 2a30489c4f88bd64abe012dedee24d1c,
-        type: 3}
-      propertyPath: m_WhatIsGround.m_Bits
-      value: 535
-      objectReference: {fileID: 0}
     - target: {fileID: 1473198976345064399, guid: 2a30489c4f88bd64abe012dedee24d1c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -31067,22 +31051,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1473198976345064437, guid: 2a30489c4f88bd64abe012dedee24d1c,
-        type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 1473198976075178013}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a30489c4f88bd64abe012dedee24d1c, type: 3}
 --- !u!1 &1473198976075178008 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1473198976345064385, guid: 2a30489c4f88bd64abe012dedee24d1c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1473198976075178007}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1473198976075178013 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 1473198976345064393, guid: 2a30489c4f88bd64abe012dedee24d1c,
     type: 3}
   m_PrefabInstance: {fileID: 1473198976075178007}
   m_PrefabAsset: {fileID: 0}

@@ -69,11 +69,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6915041186671705784}
-  - component: {fileID: 6915041186671705783}
   - component: {fileID: 6915041186671705786}
   - component: {fileID: 6915041186671705782}
   - component: {fileID: 6915041186671705781}
-  - component: {fileID: 162798229}
   - component: {fileID: 1725125154}
   m_Layer: 10
   m_Name: Enemy
@@ -99,39 +97,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6915041186671705783
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6915041186671705787}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccc4d692ff27f244c94b5d48cc73882f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  activateDistance: 50
-  pathUpdateSeconds: 0.3
-  speed: 250
-  nextWaypointDistance: 3
-  jumpNodeHeightRequirement: 0.8
-  jumpModifier: 0.3
-  jumpCheckOffset: 0.1
-  followEnabled: 1
-  jumpEnabled: 0
-  directionLookEnabled: 1
-  range: 4
-  timeBTWShots: 0.5
-  shootSpeed: 5
-  player: {fileID: 0}
-  shootPos: {fileID: 4859806353510685207}
-  bullet: {fileID: 1539632861300792, guid: 94972bec66b7df74eb2a6f47a0e9eb6f, type: 3}
-  impactEffect: {fileID: 1473625048454486, guid: 284f05ab582ef494a9ab1dd8bc1e76ae,
-    type: 3}
-  damage: 5
-  lineRenderer: {fileID: 0}
 --- !u!50 &6915041186671705786
 Rigidbody2D:
   serializedVersion: 4
@@ -184,34 +149,6 @@ CircleCollider2D:
   m_Offset: {x: 0.0401996, y: -0.11258316}
   serializedVersion: 2
   m_Radius: 0.89398164
---- !u!114 &162798229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6915041186671705787}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 1
-  drawGizmos: 1
-  detailedGizmos: 0
-  startEndModifier:
-    addPoints: 0
-    exactStartPoint: 3
-    exactEndPoint: 3
-    useRaycasting: 0
-    mask:
-      serializedVersion: 2
-      m_Bits: 4294967295
-    useGraphRaycasting: 0
-  traversableTags: -1
-  tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  graphMask:
-    value: -1
 --- !u!114 &1725125154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8938336d6df3b344bbc7b05c8a4ae44c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 3
   rb: {fileID: 6915041186671705786}
   groundLayers:
     serializedVersion: 2

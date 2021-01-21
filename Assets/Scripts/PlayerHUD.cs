@@ -24,6 +24,19 @@ public class PlayerHUD : MonoBehaviour
         {
             TakeDamage(20);
         }
+
+        Die();
+
+
+    }
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy") )
+        {
+            TakeDamage(15);
+        }
     }
 
     public void TakeDamage(int damage)
@@ -33,5 +46,14 @@ public class PlayerHUD : MonoBehaviour
         gameObject.GetComponent<Animation>().Play("PlayerRedFlag");
 
         healthBar.SetHealth(currentHealth);
+    }
+
+    public void Die()
+    {
+        if (currentHealth <= 0)
+        {
+            Destroy(gameObject);
+            LevelManager.instance.Respawn();
+        }
     }
 }
