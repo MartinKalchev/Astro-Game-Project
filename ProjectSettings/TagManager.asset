@@ -8,6 +8,8 @@ TagManager:
   - Platform
   - HealthBar
   - Enemy
+  - AttackVision
+  - Spikes
   layers:
   - Default
   - TransparentFX

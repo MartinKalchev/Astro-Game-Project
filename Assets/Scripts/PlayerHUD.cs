@@ -36,12 +36,19 @@ public class PlayerHUD : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy") )
         {
             TakeDamage(15);
-        }
+        }else if (collision.gameObject.CompareTag("Spikes"))
+            {
+                gameObject.GetComponent<Animation>().Play("Player_Hurt");
+            }
+
+
     }
+
 
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+
 
         gameObject.GetComponent<Animation>().Play("PlayerRedFlag");
 

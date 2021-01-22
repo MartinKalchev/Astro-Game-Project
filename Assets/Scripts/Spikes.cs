@@ -21,12 +21,13 @@ public class Spikes : MonoBehaviour
     public IEnumerator Knockback(float knockDur, float knockbackPwr, Vector3 knockbackDir)
     {
         float timer = 0;
+        rb.velocity = new Vector2(rb.velocity.x, 0);
 
         while (knockDur > timer)
         {
             timer += Time.deltaTime;
 
-            rb.AddForce(new Vector3(knockbackDir.x * -100, knockbackDir.y * knockbackPwr, transform.position.z));
+            rb.AddForce(new Vector3(knockbackDir.x * -100, knockbackDir.y * knockbackPwr, player.transform.position.z));
 
         }
 
@@ -37,9 +38,9 @@ public class Spikes : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            playerHUD.TakeDamage(20);
+            playerHUD.TakeDamage(10);
 
-            StartCoroutine(Knockback(0.02f, 300, player.transform.position));
+            StartCoroutine(Knockback(0.02f, 500, player.transform.position));
         }
     }
 
