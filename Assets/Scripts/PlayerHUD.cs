@@ -7,6 +7,9 @@ public class PlayerHUD : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
 
+
+    public Rigidbody2D rb;
+
     public HealthBarScript healthBar;
 
 
@@ -15,19 +18,30 @@ public class PlayerHUD : MonoBehaviour
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+        rb = gameObject.GetComponent<Rigidbody2D>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        Die();
+    }
+
+    public IEnumerator Knockback(float knockDur, float knockbackPwr, Vector3 knockbackDir)
+    {
+        float timer = 0;
+        rb.velocity = new Vector2(rb.velocity.x, 0);
+
+        while (knockDur > timer)
         {
-            TakeDamage(20);
+            timer += Time.deltaTime;
+
+            rb.AddForce(new Vector3(knockbackDir.x * -100, knockbackDir.y * knockbackPwr, gameObject.transform.position.z));
+
         }
 
-        Die();
-
-
+        yield return 0;
     }
 
 
@@ -36,22 +50,27 @@ public class PlayerHUD : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy") )
         {
             TakeDamage(15);
-        }else if (collision.gameObject.CompareTag("Spikes"))
-            {
-                gameObject.GetComponent<Animation>().Play("Player_Hurt");
-            }
-
-
+        }
     }
 
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Spikes"))
+        {
+            TakeDamage(10);
+
+            StartCoroutine(Knockback(0.02f, 500, gameObject.transform.position));
+        }
+        else if (collision.CompareTag("TurretBullet"))
+        {
+            TakeDamage(10);
+        }
+    }
 
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-
-
         gameObject.GetComponent<Animation>().Play("PlayerRedFlag");
-
         healthBar.SetHealth(currentHealth);
     }
 

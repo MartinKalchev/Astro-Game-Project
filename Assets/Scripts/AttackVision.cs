@@ -8,13 +8,13 @@ public class AttackVision : MonoBehaviour
 
     public bool isLeft = false;
 
-    public Animator anim;
+    //public Animator anim;
 
 
     void Awake()
     {
         turretAI = gameObject.GetComponentInParent<TurretAI>();
-        anim = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
+        //anim = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
     }
 
     void OnTriggerStay2D(Collider2D collision)
@@ -22,7 +22,7 @@ public class AttackVision : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
 
-          anim.SetBool("IsCrouching", false);
+          //anim.SetBool("IsCrouching", false);
             
 
             if (isLeft)

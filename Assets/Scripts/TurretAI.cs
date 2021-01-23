@@ -5,7 +5,7 @@ using UnityEngine;
 public class TurretAI : MonoBehaviour
 {
     public int curHealth;
-    public int maxHealth;
+    public int maxHealth = 100;
 
     public float distanceToPlayer;
     public float wakeRange;
@@ -24,12 +24,12 @@ public class TurretAI : MonoBehaviour
     void Awake()
     {
         anim = gameObject.GetComponent<Animator>();
-
     }
 
     void Start()
     {
         curHealth = maxHealth;
+        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
     void Update()

@@ -8,10 +8,10 @@ public class TurretBullet : MonoBehaviour
     {
         if(collision.isTrigger != true)
         {
-            if (collision.CompareTag("Player"))
-            {
-                collision.GetComponent<PlayerHUD>().TakeDamage(5);
-            }
+            //if (collision.CompareTag("Player"))
+            //{
+            //    collision.GetComponent<PlayerHUD>().TakeDamage(5);
+            //}
             Destroy(gameObject);
         }
     }
