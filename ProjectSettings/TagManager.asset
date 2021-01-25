@@ -11,6 +11,7 @@ TagManager:
   - AttackVision
   - Spikes
   - TurretBullet
+  - Pickup
   layers:
   - Default
   - TransparentFX

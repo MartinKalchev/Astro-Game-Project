@@ -21,6 +21,8 @@ public class Enemy : MonoBehaviour {
 	void Die ()
 	{
 		Instantiate(deathEffect, transform.position, Quaternion.identity);
+		//Debug.Log("ENEmy Died");
+		Score.scoreAmount += 100;
 		Destroy(gameObject);
 	}
 

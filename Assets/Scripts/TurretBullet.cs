@@ -6,7 +6,12 @@ public class TurretBullet : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.isTrigger != true)
+        if (collision.gameObject.tag == "Pickup")
+        {
+            Physics.IgnoreCollision(collision.GetComponent<Collider>(), GetComponent<Collider>());
+        }
+
+        if (collision.isTrigger != true)
         {
             //if (collision.CompareTag("Player"))
             //{
