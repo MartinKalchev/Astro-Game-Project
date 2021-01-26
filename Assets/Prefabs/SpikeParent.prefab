@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5642359085073730097}
-  m_Layer: 9
+  m_Layer: 14
   m_Name: SpikeParent
   m_TagString: Spikes
   m_Icon: {fileID: 0}
@@ -43,8 +43,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5642359085401583505}
   - component: {fileID: 5642359085401583506}
-  - component: {fileID: 5642359085401583507}
-  m_Layer: 9
+  m_Layer: 14
   m_Name: Spike Trigger
   m_TagString: Spikes
   m_Icon: {fileID: 0}
@@ -91,21 +90,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &5642359085401583507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5642359085401583504}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fd8aff24659a2845b039181bbdc15e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerHUD: {fileID: 0}
-  rb: {fileID: 0}
-  player: {fileID: 0}
 --- !u!1 &5642359085507406255
 GameObject:
   m_ObjectHideFlags: 0
@@ -116,7 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5642359085507406248}
   - component: {fileID: 5642359085507406249}
-  m_Layer: 9
+  m_Layer: 14
   m_Name: spikes (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -197,7 +181,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5642359085645864748}
   - component: {fileID: 5642359085645864749}
-  m_Layer: 9
+  m_Layer: 14
   m_Name: spikes
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -29,6 +29,7 @@ public class PlayerHUD : MonoBehaviour
         Die();
     }
 
+    // Function that adds knockback effect when the character collides with the spikes
     public IEnumerator Knockback(float knockDur, float knockbackPwr, Vector3 knockbackDir)
     {
         float timer = 0;

@@ -16,12 +16,12 @@ public class AttackVision : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player")) 
         {
 
-            if (isLeft)
+            if (isLeft) // Checks if the turret will be attacking left or right
             {
-                turretAI.Attack(false);
+                turretAI.Attack(false); 
             }
             else
             {

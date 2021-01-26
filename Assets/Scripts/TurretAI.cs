@@ -4,16 +4,14 @@ using UnityEngine;
 
 public class TurretAI : MonoBehaviour
 {
-    public int curHealth;
-    public int maxHealth = 100;
-
+   
     public float distanceToPlayer;
-    public float wakeRange;
+    public float wakeRange;      // Range in which animation activates
     public float shootInterval;
     public float bulletSpeed = 100;
     public float bulletTimer;
 
-    public bool awake = false;
+    public bool awake = false;       // initially turret is not risen from the ground
     public bool lookingRight = true;
 
     public GameObject bullet;
@@ -26,24 +24,19 @@ public class TurretAI : MonoBehaviour
         anim = gameObject.GetComponent<Animator>();
     }
 
-    void Start()
-    {
-        curHealth = maxHealth;
-    }
-
+  
     void Update()
     {
 
         anim.SetBool("Awake", awake);
         anim.SetBool("LookingRight", lookingRight);
 
-        if(target != null)
-        {
+        
             RangeCheck();
-        }
+        
 
 
-        if ( target != null && target.transform.position.x > transform.position.x)
+        if ( target != null && target.transform.position.x > transform.position.x)   // determines if player is right or left from the turret
         {
             lookingRight = true;
         }
@@ -54,6 +47,7 @@ public class TurretAI : MonoBehaviour
         }
     }
 
+    // Function that checks if the player is in the attack range of the turret
     void RangeCheck()
     {
 

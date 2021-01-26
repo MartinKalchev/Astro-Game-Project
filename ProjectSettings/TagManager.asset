@@ -12,6 +12,8 @@ TagManager:
   - Spikes
   - TurretBullet
   - Pickup
+  - TurretCollider
+  - Turret
   layers:
   - Default
   - TransparentFX
@@ -26,8 +28,8 @@ TagManager:
   - Enemy
   - Background
   - Foreground
-  - 
-  - 
+  - Turret
+  - Spikes
   - 
   - 
   - 

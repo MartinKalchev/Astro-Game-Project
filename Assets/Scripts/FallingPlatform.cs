@@ -24,7 +24,7 @@ public class FallingPlatform : MonoBehaviour
     IEnumerator Fall()
     {
         yield return new WaitForSeconds(fallDelay);
-        rb.isKinematic = false;
+        rb.isKinematic = false;   // disable kinematic property and the platform will fall
         GetComponent<Collider2D>().isTrigger = true;
 
         yield return 0;
