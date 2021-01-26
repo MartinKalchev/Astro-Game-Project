@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHUD : MonoBehaviour
 {
@@ -78,8 +79,7 @@ public class PlayerHUD : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
-            Destroy(gameObject);
-            LevelManager.instance.Respawn();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
         }
     }
 }

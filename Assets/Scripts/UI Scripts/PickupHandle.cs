@@ -27,7 +27,7 @@ public class PickupHandle : MonoBehaviour
             image.color = tempColor;
 
             //if(pm.pickupCount == 4)
-            if (pm.pickupCount == 3)
+            if (pm.pickupCount == 4)
             {
                 Debug.Log(pm.pickupCount);
                 Debug.Log("You won!!!");

@@ -76,7 +76,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turretAI: {fileID: 1458680351}
   isLeft: 0
-  anim: {fileID: 0}
 --- !u!1 &901465790
 GameObject:
   m_ObjectHideFlags: 0
@@ -153,7 +152,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turretAI: {fileID: 1458680351}
   isLeft: 1
-  anim: {fileID: 0}
 --- !u!1 &1024949450
 GameObject:
   m_ObjectHideFlags: 0

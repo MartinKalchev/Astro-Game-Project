@@ -29,7 +29,6 @@ public class TurretAI : MonoBehaviour
     void Start()
     {
         curHealth = maxHealth;
-        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
     void Update()
