@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\FallingPlatform.cs" />
     <Compile Include="Assets\Scripts\HealthBarScript.cs" />
     <Compile Include="Assets\Scripts\PatrollingEnemy.cs" />
+    <Compile Include="Assets\Scripts\PatrollingOctopus.cs" />
     <Compile Include="Assets\Scripts\Platform.cs" />
     <Compile Include="Assets\Scripts\PlayerHUD.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
