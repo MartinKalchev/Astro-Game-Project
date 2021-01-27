@@ -22,9 +22,9 @@ public class PatrollingEnemy : MonoBehaviour
 
     private void Update()
     {
-        hit = Physics2D.Raycast(groundCheck.position, -transform.up, 1f, groundLayers);
-        hitTurret = Physics2D.Raycast(turretCheck.position, transform.right, 1f, turretLayers);
-        hitSpikes = Physics2D.Raycast(spikesCheck.position, transform.right, 1f, spikesLayers);
+        hit = Physics2D.Raycast(groundCheck.position, -transform.up, 1f, groundLayers); // shoots a ray and checks if is colliding with ground
+        hitTurret = Physics2D.Raycast(turretCheck.position, transform.right, 1f, turretLayers); // shoots a ray and checks if is colliding with turret
+        hitSpikes = Physics2D.Raycast(spikesCheck.position, transform.right, 1f, spikesLayers); // shoots a ray and checks if is colliding with spikes
     }
 
     private void FixedUpdate()
@@ -83,27 +83,6 @@ public class PatrollingEnemy : MonoBehaviour
 
 
     }
-
-    //private void OnTriggerEnter2D(Collider2D collision)
-    //{
-
-    //    if (collision.CompareTag("TurretCollider"))
-    //    {
-    //        if (isFacingRight)
-    //        {
-    //            rb.velocity = new Vector2(speed, rb.velocity.y);
-    //        }
-    //        else
-    //        {
-    //            rb.velocity = new Vector2(-speed, rb.velocity.y);
-    //        }
-    //    }
-    //    else
-    //    {
-    //        isFacingRight = !isFacingRight;
-    //        transform.localScale = new Vector3(-transform.localScale.x, 1f, 1f);
-    //    }
-    //}
 
 
 }

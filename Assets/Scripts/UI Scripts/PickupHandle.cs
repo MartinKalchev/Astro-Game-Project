@@ -16,22 +16,22 @@ public class PickupHandle : MonoBehaviour
         pm = player.GetComponent<PlayerMovement>();
     }
     void OnCollisionEnter2D(Collision2D collision)
-    {
+    {   
+        // if colliding with player
         if(collision.gameObject.name == "Player")
         {
             GameObject.Destroy(pickup);
 
-            //image = GetComponent<Image>();
+            //The collected part gets coloured by maxing out the alpha channel
             var tempColor = image.color;
             tempColor.a = 1f;
             image.color = tempColor;
 
-            //if(pm.pickupCount == 4)
+            //If all spaceship parts are collected the win screen is loaded
             if (pm.pickupCount == 4)
             {
                 Debug.Log(pm.pickupCount);
                 Debug.Log("You won!!!");
-                //SceneManager.LoadScene("WinScreen");
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
             pm.pickupCount++;

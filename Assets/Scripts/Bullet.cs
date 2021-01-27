@@ -16,12 +16,8 @@ public class Bullet : MonoBehaviour {
 
 	void OnTriggerEnter2D (Collider2D hitInfo)
 	{
-		//if (hitInfo.gameObject.tag == "Pickup")
-		//{
-		//	Physics.IgnoreCollision(hitInfo.GetComponent<Collider>(), GetComponent<Collider>());
-		//}
-		
-		Enemy enemy = hitInfo.GetComponent<Enemy>();
+        
+        Enemy enemy = hitInfo.GetComponent<Enemy>();
 		if (enemy != null)
 		{
 			enemy.TakeDamage(damage);
