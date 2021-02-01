@@ -18,12 +18,12 @@ public class Bullet : MonoBehaviour {
 	{
         
         Enemy enemy = hitInfo.GetComponent<Enemy>();
-		if (enemy != null)
+		if (enemy != null)   // if a hit is registered do damage to the enemy
 		{
-			enemy.TakeDamage(damage);
+			enemy.TakeDamage(damage);  
 		}
 
-		Instantiate(impactEffect, transform.position, transform.rotation);
+		Instantiate(impactEffect, transform.position, transform.rotation);  // instantiates the impact effect when a bullet hits the enemy
 
 		Destroy(gameObject);
 	}

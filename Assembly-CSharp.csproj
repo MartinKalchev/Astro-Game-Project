@@ -80,6 +80,7 @@
     <Compile Include="Assets\Scripts\TurretAI.cs" />
     <Compile Include="Assets\Scripts\TurretBullet.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\FinalScore.cs" />
+    <Compile Include="Assets\Scripts\UI Scripts\GoToMainMenu.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\PickupHandle.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\PlayAgainScript.cs" />

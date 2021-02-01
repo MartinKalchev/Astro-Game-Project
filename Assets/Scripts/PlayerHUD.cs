@@ -59,20 +59,21 @@ public class PlayerHUD : MonoBehaviour
     {
         if (collision.CompareTag("Spikes"))
         {
-            TakeDamage(10);
+            TakeDamage(8);
 
             StartCoroutine(Knockback(0.02f, 500, gameObject.transform.position));
         }
         else if (collision.CompareTag("TurretBullet"))
         {
-            TakeDamage(10);
+            TakeDamage(7);
         }
     }
 
+   
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        gameObject.GetComponent<Animation>().Play("PlayerRedFlag");
+        gameObject.GetComponent<Animation>().Play("PlayerRedFlag");  // if the player takes damage the red falshing animations plays to indicate that the player has sustained damage
         healthBar.SetHealth(currentHealth);
     }
 

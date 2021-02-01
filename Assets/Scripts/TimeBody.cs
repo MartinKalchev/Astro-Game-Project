@@ -10,7 +10,7 @@ public class TimeBody : MonoBehaviour
     public Animator animator;
 
     public GameObject grayOutEffect;
-    List<PointInTime> pointsInTime;
+    List<PointInTime> pointsInTime;   // stores the past position of the player
     void Start()
     {
         pointsInTime = new List<PointInTime>();
@@ -22,8 +22,7 @@ public class TimeBody : MonoBehaviour
     void Update()
     {
         AnimatorClipInfo[] m_AnimatorClipInfo = animator.GetCurrentAnimatorClipInfo(0);
-        //Output the name of the starting clip
-        // Debug.Log("Starting clip : " + m_AnimatorClipInfo[0].clip);
+     
         if (Input.GetKeyDown(KeyCode.Return))
         {
             StartRewind();

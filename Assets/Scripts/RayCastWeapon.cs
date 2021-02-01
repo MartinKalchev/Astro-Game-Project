@@ -19,13 +19,13 @@ public class RayCastWeapon : MonoBehaviour {
 
 	IEnumerator Shoot ()
 	{
-		RaycastHit2D hitInfo = Physics2D.Raycast(firePoint.position, firePoint.right);
+		RaycastHit2D hitInfo = Physics2D.Raycast(firePoint.position, firePoint.right);  // a raycast which checks is something is hit
 
 
 		if (hitInfo)
 		{
 			Enemy enemy = hitInfo.transform.GetComponent<Enemy>();
-			if (enemy != null)
+			if (enemy != null)  // if a gameobject of enemy tag is hit do damage to it
 			{
 				enemy.TakeDamage(damage);
 			}

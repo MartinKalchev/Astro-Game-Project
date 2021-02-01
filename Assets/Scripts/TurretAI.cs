@@ -7,7 +7,7 @@ public class TurretAI : MonoBehaviour
    
     public float distanceToPlayer;
     public float wakeRange;      // Range in which animation activates
-    public float shootInterval;
+    public float shootInterval;  // Interval between shots
     public float bulletSpeed = 100;
     public float bulletTimer;
 
@@ -32,7 +32,7 @@ public class TurretAI : MonoBehaviour
         anim.SetBool("LookingRight", lookingRight);
 
         
-            RangeCheck();
+        RangeCheck();
         
 
 
@@ -53,6 +53,7 @@ public class TurretAI : MonoBehaviour
 
         distanceToPlayer = Vector3.Distance(transform.position, target.position);
 
+        // if the player is withing the attack range the turret comes from the ground
         if (distanceToPlayer < wakeRange)
         {
             awake = true;
@@ -64,6 +65,7 @@ public class TurretAI : MonoBehaviour
         }
     }
 
+    // Function which controls the attack behaviour of the turret
     public void Attack(bool attackingRight)
     {
 
@@ -71,7 +73,7 @@ public class TurretAI : MonoBehaviour
 
         if (target != null && bulletTimer >= shootInterval)
         {
-            Vector2 direction = target.transform.position - transform.position;
+            Vector2 direction = target.transform.position - transform.position;  // makes the bullet travel against the player
 
             direction.Normalize();
 
@@ -81,7 +83,7 @@ public class TurretAI : MonoBehaviour
                 bulletClone = Instantiate(bullet, shootPointLeft.transform.position, shootPointLeft.transform.rotation) as GameObject;
                 bulletClone.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
    
-                bulletTimer = 0;
+                bulletTimer = 0;  // set to 0 so the turret can keep firing
 
             }
 
